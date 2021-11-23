@@ -3,5 +3,42 @@
     Home
 {% endblock %}
 {% block content %}
-    <h1>Home</h1>
+    {% load static %}
+    <div class="container-fluid" style="background-color: #259CC0">
+        <div class="row">
+            <img style="max-width: 900px; margin: auto" src="{% static 'images/store.png' %}">
+        </div>
+    </div>
+    <div class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto text-center">
+                    <h1 class="text-capitalize font-weight-bold">Our products</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {% for i in 'aaaaaaaa' %}
+                <div class="col-9 mx-auto col-md-6 col-lg-3">
+                    <div class="card mb-4">
+                        <div class="py-4">
+                            <img class="card-img-top" src="{% static 'images/coffee.jpg' %}">
+                        </div>
+                        <div class="card-footer d-flex justify-content-between" style="background: transparent; border-color: transparent;">
+                            <p class="font-weight-bold md-0">
+                                Coffee
+                            </p>
+                            <h5 class="text-info fst-italic mb-0">
+                                $10.5
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
 {%  endblock %}
