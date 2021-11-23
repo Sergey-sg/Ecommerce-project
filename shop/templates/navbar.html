@@ -6,11 +6,9 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link text-light text-uppercase font-weight-bold px-3 dropdown-toggle" role="button" data-bs-toggle="dropdown" href="">Categories</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">categori 1</a></li>
-                            <li><a class="dropdown-item" href="">categori 2</a></li>
-                            <li><a class="dropdown-item" href="">categori 3</a></li>
-                            <li><a class="dropdown-item" href="">categori 4</a></li>
-                            <li><a class="dropdown-item" href="">categori 5</a></li>
+                            {% for category in links %}
+                            <li><a class="dropdown-item" href="{{ category.get_url}}">{{ category.name }}</a></li>
+                            {% endfor %}
                         </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="">Contacts</a></li>
