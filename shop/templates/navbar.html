@@ -1,5 +1,5 @@
     <nav class="navbar navbar-expand-md navbar-light bg-dark">
-        <a class="navbar brand nav-link " href="#"><span class="material-icons material-icons md-48 text-success">store</span></a>
+        <a class="navbar brand nav-link " href="{% url 'home' %}"><span class="material-icons material-icons md-48 text-success">store</span></a>
         <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"><span class="navbar-toggler-icon"></span></button>
         <div id="navbar" class="collapse navbar-collapse justify-content-between">
             <ul class="navbar-nav">
@@ -13,6 +13,13 @@
                 </li>
                 <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="">Contacts</a></li>
                 <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="">About</a></li>
+                {% if item_count > 0 %}
+                    <li class="nav-item">
+                        <a class="nav-link text-light text-uppercase font-weight-bold px-3" href="{% url 'cart_detail' %}">
+                            <i class="material-icons cart-icon">add_shopping_cart</i>({{ item_count }})
+                        </a>
+                    </li>
+                {% endif %}
             </ul>
 
             <form class="form-inline">
