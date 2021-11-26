@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
     Home
 {% endblock %}
 {% block content %}
-    {% load static %}
     <div class="container-fluid" style="background-color: #259CC0">
         <div class="row">
-            <img style="max-width: 900px; margin: auto" src="{% static 'images/store.png' %}">
+            <img style="max-width: 900px; margin: auto" src="{% static 'images/store.png' %}" alt="store">
         </div>
     </div>
     <div class="py-4">
